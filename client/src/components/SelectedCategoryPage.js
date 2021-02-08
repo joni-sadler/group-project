@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryProduct from "./CategoryProduct";
+import ItemContainerSmall from "./ItemContainerSmall";
 
 const SelectedCategoryPage = () => {
 
@@ -7,7 +7,7 @@ const SelectedCategoryPage = () => {
         <div>
             Page once category has been selected from dropdown.
             Fetch and map over items from within this category and display.
-            <CategoryProduct />
+            <ItemContainerSmall />
         </div>
     )
 }
