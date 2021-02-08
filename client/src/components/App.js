@@ -4,25 +4,24 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from 'react-redux';
 
 import { receiveCategories, receiveItems, receiveCompanies } from '../actions';
-
-import Cart from "./Cart";
-
+import SelectedCategoryPage from "./CategoryProduct";
+import SelectedCompanyPage from "./CompanyProduct";
 import Home from "./Home";
-
-import Menu from "./Menu";
+//import Cart from "./Cart";
+//import Menu from "./Menu";
 
 
 const App = () => {
   const dispatch = useDispatch();
 
-  const homePageState = useSelector(state=>state);
-  console.log(homePageState);
+  // const homePageState = useSelector(state=>state);
+  // console.log(homePageState);
 
   useEffect(() => {
     fetch('/categories')
       .then(res=>res.json())
       .then(res=>dispatch(receiveCategories(res.data)));
-    fetch('./products')
+    fetch('/products')
       .then(res=>res.json())
       .then(res=>dispatch(receiveItems(res.data)))
   }, []);
@@ -36,23 +35,23 @@ const App = () => {
   return (
     <BrowserRouter>
       <Wrapper>
-        <Menu homePageState={homePageState}/>
+        {/* <Menu homePageState={homePageState}/> */}
         <Switch>
 
           <Route exact path="/">
             <Home />
           </Route>
-
           <Route path="/products/:id">
             Individual product
           </Route>
-
-          <Route path="/:category">
-            Category
+          <Route path="/products">
+            All products
           </Route>
-
-          <Route path="/company/:companyId">
-            Company
+          <Route path="/categories/:category">
+            <SelectedCategoryPage />
+          </Route>
+          <Route path="/companies/:company">
+            <SelectedCompanyPage />
           </Route>
 
         </Switch>
