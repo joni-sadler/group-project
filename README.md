@@ -7,14 +7,14 @@ The main objective for our group project for Concordia University’s Full-Stack
 
 ## Project Requirements
 
-Frontend<br />
+FRONTEND<br />
 Allow users to:<br />
 View all items in the database<br />
 Purchase items that are in stock<br />
 View a cart containing the items they intend to purchase<br />
 Edit cart before completing purchase<br />
 
-Backend<br />
+BACKEND<br />
 The node server should:<br />
 Be RESTful<br />
 Provide the frontend with the required data in a succinct and organized way<br />
