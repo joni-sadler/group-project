@@ -7,18 +7,18 @@ The main objective for our group project for Concordia University’s Full-Stack
 
 ## Project Requirements
 
-Frontend
-Allow users to:
-View all items in the database
-Purchase items that are in stock
-View a cart containing the items they intend to purchase
-Edit cart before completing purchase
+Frontend<br />
+Allow users to:<br />
+View all items in the database<br />
+Purchase items that are in stock<br />
+View a cart containing the items they intend to purchase<br />
+Edit cart before completing purchase<br />
 
-Backend
-The node server should:
-Be RESTful
-Provide the frontend with the required data in a succinct and organized way
-Update the inventory as users make purchases
+Backend<br />
+The node server should:<br />
+Be RESTful<br />
+Provide the frontend with the required data in a succinct and organized way<br />
+Update the inventory as users make purchases<br />
 
 
 ## Packages Used
